@@ -24,6 +24,7 @@ module Inspec::Resources
     filter_table_config.add(:project_ids, field: :project_id)
     filter_table_config.add(:project_names, field: :project_name)
     filter_table_config.add(:project_numbers, field: :project_number)
+    filter_table_config.add(:lifecycle_states, field: :lifecycle_state)
     filter_table_config.connect(self, :fetch_data)
 
     def fetch_data
@@ -37,7 +38,8 @@ module Inspec::Resources
         @projects.projects.map do |project|
           project_rows+=[{ project_id: project.project_id,
                       project_name: project.name,
-                      project_number: project.project_number }]
+                      project_number: project.project_number,
+	 	      lifecycle_state: project.lifecycle_state }]
         end
         next_page = @projects.next_page_token
         break unless next_page

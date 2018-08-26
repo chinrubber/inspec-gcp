@@ -26,12 +26,24 @@ module Inspec::Resources
       end
     end
 
+    # helper for returning label keys to perform checks
+    def labels_keys
+      return [] if !defined?(labels)
+      labels.item.keys
+    end
+    
+    # helper for returning label values to perform checks
+    def labels_values
+      return [] if !defined?(labels)
+      labels.item.values
+    end
+
     def exists?
       !@project.nil?
     end
 
     def to_s
-      "Project #{@display_name}"
+      "Project #{name}"
     end
   end
 end
