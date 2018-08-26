@@ -49,7 +49,7 @@ The following examples show how to use this InSpec audit resource.
 
 ## Properties
 
-*  `create_time`, `lifecycle_state`, `name`, `parent`, `project_id`, `project_number`
+*  `create_time`, `lifecycle_state`, `name`, `parent`, `project_id`, `project_number`, `labels_keys`, `labels_values`
 
 <br>
 

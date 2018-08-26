@@ -69,13 +69,14 @@ The following examples show how to use this InSpec audit resource.
 
 ## Filter Criteria
 
-This resource supports the following filter criteria:  `project_id`; `project_name` and `project_number`. Anyy of these may be used with `where`, as a block or as a method.
+This resource supports the following filter criteria:  `project_id`; `project_name`;`project_number` and `lifecycle_state`. Any of these may be used with `where`, as a block or as a method.
 
 ## Properties
 
 *  `project_ids` - an array of google_compute_project identifier strings
 *  `project_names` - an array of google_compute_project name strings
 *  `project_numbers`- an array of google_compute_project number identifier integers
+*  `lifecycle_states` - an array of google_compute_project lifecycle_state strings
 
 <br>
 
